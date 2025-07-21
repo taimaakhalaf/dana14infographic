@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANA-014 Exit Survey Findings: Detailed Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            width: 100%;
+            max-width: 600px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+        }
+        .section-title {
+            color: #003f5c;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .subsection-title {
+            color: #4f8a8b;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-[#003f5c] text-white p-8 text-center shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-2">DANA-014 Exit Survey Findings</h1>
+        <p class="text-lg md:text-xl text-gray-200">In-Depth Comprehensive Insights & Recommendations</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="introduction" class="mb-16 bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl section-title text-center">Introduction & Purpose</h2>
+            <p class="text-gray-700 mt-4 leading-relaxed text-center max-w-4xl mx-auto">
+                This presentation provides an exhaustive summary of findings from the DANA-014 Exit Survey, encompassing all program components, quantitative metrics, and detailed qualitative feedback. Our objective is to gain a granular, holistic understanding of learner satisfaction, identify specific program strengths, pinpoint precise areas for improvement with supporting evidence, and inform strategic, data-driven enhancements for future cohorts.
+            </p>
+        </section>
+
+        <section id="overall-performance" class="mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl section-title">Overall Program Performance: Net Promoter Score (NPS)</h2>
+                <p class="text-gray-600 mt-2 max-w-3xl mx-auto">
+                    A very strong NPS of 77.3 indicates exceptional overall learner satisfaction and a significant willingness to recommend the program. The remarkably low percentage of detractors suggests that negative experiences are rare and contained.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center justify-center h-full">
+                    <span class="text-7xl font-extrabold text-[#ff6361]">77.3</span>
+                    <span class="text-2xl font-bold text-[#003f5c] mt-2">Overall Net Promoter Score</span>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl subsection-title text-center">NPS Distribution (n=365)</h3>
+                    <div class="chart-container h-[300px] md:h-[350px]">
+                        <canvas id="npsChart"></canvas>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-700 mt-4">
+                        <li><strong>Promoters:</strong> 296 (81.1%) - Highly satisfied, enthusiastic learners.</li>
+                        <li><strong>Passives:</strong> 55 (15.1%) - Satisfied but unenthusiastic, susceptible to competitor offerings.</li>
+                        <li><strong>Detractors:</strong> 14 (3.8%) - Unhappy customers who can damage your brand.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="nps-drivers" class="mb-16 bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl section-title text-center">Key Drivers of NPS: Significant Variables from Regression Analysis</h2>
+            <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-center">
+                Our linear regression analysis identified four statistically significant variables strongly correlated with NPS, explaining 54.5% of the variance in NPS scores. Focusing resources on enhancing these areas will yield the greatest impact on overall learner satisfaction.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                <div class="kpi-card border-t-4 border-[#ff6361]">
+                    <div class="text-4xl mb-3">💼</div>
+                    <h3 class="text-xl font-bold mb-2 text-[#003f5c]">Professional Development</h3>
+                    <p class="text-gray-600 text-sm">Coefficient: 0.0785 (p-value: 0.044). Positive experiences in career advancement opportunities are a key driver of NPS.</p>
+                </div>
+                <div class="kpi-card border-t-4 border-[#ffa600]">
+                    <div class="text-4xl mb-3">📚</div>
+                    <h3 class="text-xl font-bold mb-2 text-[#003f5c]">Content Recommendation</h3>
+                    <p class="text-gray-600 text-sm">Coefficient: 0.3101 (p-value: 0.000). High content ratings are positively correlated with NPS.</p>
+                </div>
+                <div class="kpi-card border-t-4 border-[#4f8a8b]">
+                    <div class="text-4xl mb-3">💻</div>
+                    <h3 class="text-xl font-bold mb-2 text-[#003f5c]">Technical Experience</h3>
+                    <p class="text-gray-600 text-sm">Coefficient: 0.3797 (p-value: 0.000). Good technical experiences correlate with higher NPS scores.</p>
+                </div>
+                <div class="kpi-card border-t-4 border-[#58508d]">
+                    <div class="text-4xl mb-3">🌐</div>
+                    <h3 class="text-xl font-bold mb-2 text-[#003f5c]">English Comfort</h3>
+                    <p class="text-gray-600 text-sm">Coefficient: 0.2758 (p-value: 0.000). Comfort with English impacts learners’ ability to engage effectively.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="ta-analysis" class="mb-16 bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl section-title text-center">Teaching Assistants (TAs) Analysis</h2>
+            <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-center">TAs are a cornerstone of the program's success, demonstrating high performance and receiving positive feedback on their support and expertise.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                <div>
+                    <h3 class="text-xl subsection-title text-center">Overall TA Performance (n=363)</h3>
+                    <div class="chart-container">
+                        <canvas id="taOverallPerformanceChart"></canvas>
+                    </div>
+                    <p class="text-gray-700 text-center mt-4 text-sm">
+                        TAs show strong average scores in communication, responsiveness, support, and feedback, leading to a high overall recommendation.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl subsection-title text-center">Top Performing TAs (by CSAT)</h3>
+                    <div class="chart-container">
+                        <canvas id="taTopPerformersChart"></canvas>
+                    </div>
+                    <p class="text-gray-700 text-center mt-4 text-sm">
+                        These TAs achieved exceptional CSAT scores, indicating very high learner satisfaction with their support.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl subsection-title">Key Strengths</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                        <li><strong class="font-bold">Responsiveness & Availability:</strong> "Miguel is very responsive to any questions, comments, or concerns that have come up."</li>
+                        <li><strong class="font-bold">Clarity & Effectiveness of Explanations:</strong> "He explains things simply and clearly in a way that is easy to understand."</li>
+                        <li><strong class="font-bold">Supportive & Patient Attitude:</strong> "Miguel helped me a lot when I was confused... and was very patient."</li>
+                        <li><strong class="font-bold">Knowledge & Expertise:</strong> "He is an expert in every area."</li>
+                        <li><strong class="font-bold">Constructive & Timely Feedback:</strong> "His feedback on assignments was constructive and timely, which really helped me improve."</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl subsection-title">Areas for Improvement</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                        <li><strong class="font-bold">Timeliness & Depth of Feedback:</strong> "Mr. Vikram Singh... does not respond to my questions within 24 hours; sometimes he takes more than 2 days to respond. If asked for feedback, he insists on me booking sessions with him to get his feedback. His feedback on one of the assignments that he graded was bare minimum."</li>
+                        <li><strong class="font-bold">Communication Clarity:</strong> "Roth seems clueless at times; all she does is send links for references."</li>
+                        <li><strong class="font-bold">Patience & Engagement:</strong> "At times, he seemed bothered by my ignorance" (Miguel Pire); "Just wish he would have taken the initiative to engage more in the chats." (Shawn James)</li>
+                        <li><strong class="font-bold">Scheduling:</strong> "I wish she had more appointments; all appointments were in the evening."</li>
+                        <li><strong class="font-bold">Teaching Style Compatibility:</strong> "Just teaching style didn't work well with my learning style" (Jorge Viloria)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="instructor-analysis" class="mb-16 bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl section-title text-center">Head TA & Lead Instructor Analysis</h2>
+            <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-center">Instructors and Head TAs are highly regarded for their knowledge and teaching abilities, with specific feedback highlighting individual strengths and areas for growth.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-xl subsection-title text-center">Head TA (Kessie) Performance</h3>
+                    <div class="chart-container h-[250px]">
+                        <canvas id="headTaPerformanceChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">
+                        <strong>Strengths:</strong> Knowledge (80 responses), Responsiveness (55).
+                        <strong>Improvement:</strong> Clarity & Pacing (40 responses), Communication & Leadership (10 responses), Language/Accent Barriers (5 responses), Limited One-on-One Interaction (5 responses).
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-xl subsection-title text-center">Lead Instructor 1 (Viviana)</h3>
+                     <div class="chart-container h-[250px]">
+                        <canvas id="li1PerformanceChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">
+                        <strong>Strengths:</strong> Engaging & Fun Style (90 responses), Clarity (75), Subject Knowledge (60), Positive & Supportive Environment (45), Effective Communication (40), Well-Organized Lectures (25), Real-World Examples (20).
+                        <strong>Improvement:</strong> Minor feedback on pacing (8 responses), occasional boredom (1 response), limited ability to answer all questions due to time (1 response).
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="text-xl subsection-title text-center">Lead Instructor 2 (Kessie)</h3>
+                    <div class="chart-container h-[250px]">
+                        <canvas id="li2PerformanceChart"></canvas>
+                    </div>
+                     <p class="text-sm text-gray-600 mt-2">
+                        <strong>Strengths:</strong> Expertise (60 responses), Clarity (45), Responsiveness (30), Engaging & Positive Style (25), Pacing & Organization (20).
+                        <strong>Improvement:</strong> Clarity & Pace (15 responses), Energy Level (10), Communication Style (3 responses).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="csc-analysis" class="mb-16 bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl section-title text-center">Career Success Coaches (CSCs) Analysis</h2>
+            <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-center">CSCs play a vital role in career preparation, with learners highly valuing their expertise in resume building, interview coaching, and personalized support.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                <div>
+                    <h3 class="text-xl subsection-title text-center">Top Performing CSCs (by CSAT)</h3>
+                    <div class="chart-container">
+                        <canvas id="cscPerformanceChart"></canvas>
+                    </div>
+                    <p class="text-gray-700 text-center mt-4 text-sm">
+                        CSCs demonstrate high levels of learner satisfaction, with many exceeding 90% CSAT.
+                    </p>
+                </div>
+                <div>
+                     <h3 class="text-xl subsection-title">Key Strengths</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mt-2 text-sm">
+                        <li><strong class="font-bold">Expertise in Resume & Career Guidance:</strong> "Very knowledgeable of the career change process, positive and helpful with career profiles, resume, etc." (Kaneesha Tarrant).</li>
+                        <li><strong class="font-bold">Supportive & Approachable Communication:</strong> "She is relatable, positive and helpful." (Kaneesha Tarrant).</li>
+                        <li><strong class="font-bold">Professionalism & Engagement:</strong> "Professional, knowledgeable, helpful, supportive, experienced, caring and very enthusiastic." (Kaneesha Tarrant).</li>
+                        <li><strong class="font-bold">Interview Preparation:</strong> "Helpful. Was able to get rid of interview anxiety" (Kaneesha Tarrant).</li>
+                        <li><strong class="font-bold">Personalized & Actionable Feedback:</strong> "My CSC’s detailed guidance on aligning my resume to specific standards." (Mikelynn Romero).</li>
+                    </ul>
+                    <h3 class="text-xl subsection-title mt-4">Areas for Improvement</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mt-2 text-sm">
+                         <li><strong class="font-bold">Communication Responsiveness & Availability:</strong> "Meeting times are inconvenient with limited to no weekend options." (Noelle Carroll); "She took weeks to answer." (Ashley Tejada).</li>
+                        <li><strong class="font-bold">Proactive Engagement:</strong> "I believe more proactive engagement is necessary... asking things like 'How is your job search going?'" (Noelle Carroll).</li>
+                        <li><strong class="font-bold">Relevance & Novelty of Advice:</strong> "Ms. Julienne... provided very generic and universal tips that I already had knowledge about."</li>
+                        <li><strong class="font-bold">Support Consistency:</strong> "I never got her help when I asked; she told me to do it by myself. I was really disappointed." (Claudia Agudelo).</li>
+                        <li><strong class="font-bold">LinkedIn Requirement Concerns:</strong> "I am not interested in LinkedIn, but unfortunately that is part of the program, and that's not her fault." (Ayanna Aisien).</li>
+                        <li><strong class="font-bold">Meeting Scheduling Challenges:</strong> "Unfortunately, schedules are hard to set up for meetings." (Emmanuel Manu).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="pd-content-analysis" class="mb-16">
+            <h2 class="text-3xl section-title text-center">Professional Development & Course Content</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl subsection-title text-center">Professional Development Analysis</h3>
+                    <p class="text-center text-gray-600 text-sm mb-4">CSAT: 70.7%</p>
+                    <div class="chart-container">
+                        <canvas id="pdBeneficialChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">
+                        <strong class="font-bold">Key Strengths:</strong> Impactful Resume/LinkedIn Support (28 responses), Valuable Resources, Tools, and Workshops (14 responses), Relevance and Practicality of Content (7 responses).
+                        <strong class="font-bold">Improvement Areas:</strong> Content Customization & Up-to-Date Material (4 responses), Interactivity & Engagement (e.g., Mock Interviews), Program Structure and Clarity (3 responses), Review and Feedback on PD Assignments (1 response), Additional Resources and Support (1 response).
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl subsection-title text-center">Course Content Analysis</h3>
+                    <p class="text-center text-gray-600 text-sm mb-4">CSAT: 75.9% | Relevance for Jobs: 91.8% Positive</p>
+                    <div class="chart-container">
+                        <canvas id="lectureDifficultyChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">
+                        <strong class="font-bold">Key Strengths:</strong> Content Relevance & Practical Application (30 responses), Skill Development & Confidence Building (18 responses), Comprehensive Topic Coverage (12 responses).
+                        <strong class="font-bold">Improvement Areas:</strong> Pacing & Time Allocation (22 responses, "SQL could have been longer"), Need for More Practice and Exercises (12 responses), Clarity and Guidance on Complex Topics (10 responses), Content Depth and Comprehensiveness (8 responses), Technical Issues and Platform Usability (3 responses).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule-tech-analysis" class="mb-16">
+            <h2 class="text-3xl section-title text-center">Program Schedule & Technology Tools</h2>
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl subsection-title text-center">Program Schedule Analysis</h3>
+                    <p class="text-center text-gray-600 text-sm mb-4">CSAT: 64.4%</p>
+                     <div class="chart-container">
+                        <canvas id="programLengthOverallChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">
+                        <strong class="font-bold">Key Strengths:</strong> Schedule Suitability and Balance (13 responses), Program Length and Duration (6 responses), Flexibility and Accommodation (5 responses).
+                        <strong class="font-bold">Improvement Areas:</strong> Lecture Timing Conflicts with Work Shifts (27 responses, "Awful for people who have a donut schedule"), Lecture Pacing and Depth (10 responses), Desire for More Flexible or Alternative Scheduling Options (14 responses), Lecture Scheduling Preferences (6 responses), Scheduling Consistency and Due Dates (3 responses).
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl subsection-title text-center">Technology Tools Analysis</h3>
+                    <p class="text-center text-gray-600 text-sm mb-4">Overall CSAT: 79.7%</p>
+                    <div class="chart-container">
+                        <canvas id="techCsatChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">
+                        <strong class="font-bold">Key Strengths:</strong> Ease of Use and Navigation (8 responses), Slack as an Interactive & Valuable Tool (5 responses), Helpful Features and Learning Tools (4 responses), Overall Positive Experience (3 responses), New Learning Experience (1 response).
+                        <strong class="font-bold">Improvement Areas:</strong> Codio Performance Issues (44 responses), Slack Functionality and Usage Issues (4 responses), Training Website Issues (3 responses), Compatibility and Usability Concerns (3 responses), Privacy Concerns Regarding Tool Usage (1 response), Access Duration (1 response), Feedback on Project Results (1 response).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="job-skills-analysis" class="mb-16 bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl section-title text-center">Job Search Status & Career Skills Analysis</h2>
+            <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-center">
+                The program significantly contributes to skill development and career preparation, with learners feeling confident and equipped for future roles.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl subsection-title text-center">Job Placement Data</h3>
+                    <p class="text-gray-700 mt-4 text-sm text-center">
+                        The survey identified <strong>10 job placements</strong> since the program started.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center mt-4">
+                        <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-lg text-[#003f5c]">Average Salary</h4>
+                            <p class="text-2xl font-bold text-[#ff6361]">$52,500</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-lg text-[#003f5c]">Salary Range</h4>
+                            <p class="text-xl font-bold text-[#ffa600]">$40,000 - $115,000</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                            <h4 class="font-semibold text-lg text-[#003f5c]">Top Companies</h4>
+                            <p class="text-xl font-bold text-[#4f8a8b]">Amazon (8), Bon Secours (1), Capital One (1)</p>
+                        </div>
+                    </div>
+                     <h3 class="text-xl subsection-title text-center mt-8">Where are you in your job search? (n=354)</h3>
+                    <div class="chart-container">
+                        <canvas id="jobSearchStatusChart"></canvas>
+                    </div>
+                    <h3 class="text-xl subsection-title text-center mt-8">How do you currently feel about your job search process? (n=357)</h3>
+                    <div class="chart-container">
+                        <canvas id="jobSearchFeelingsChart"></canvas>
+                    </div>
+                    <h3 class="text-xl subsection-title text-center mt-8">Roughly how many jobs have you applied to in the last month? (n=320)</h3>
+                    <div class="chart-container">
+                        <canvas id="jobsAppliedChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8">
+                <h3 class="text-xl subsection-title">Overall Program Impact on Skills (from Program Feedback)</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                    <li><strong class="font-bold">Strong Skill Development & Career Preparation (38 responses):</strong> "I would recommend this training program because it gives you a strong foundation in key data analytics tools like Excel, SQL, Tableau, and Python.", "I feel prepared and confident with the material I've learned thus far."</li>
+                    <li><strong class="font-bold">Hands-On, Practical, & Project-Based Learning (14 responses):</strong> "I especially liked how we worked on real projects that helped build a strong portfolio."</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="recommendations" class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl section-title text-center">Key Recommendations: The Path Forward</h2>
+            <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-center">
+                Based on comprehensive learner feedback, we propose six core recommendations to significantly enhance the program experience for future cohorts.
+            </p>
+            <div class="space-y-6 mt-8">
+                <div class="bg-gray-50 rounded-xl p-6 flex items-start space-x-6 shadow-sm">
+                    <div class="text-4xl bg-[#ff6361] text-white rounded-full flex-shrink-0 w-16 h-16 flex items-center justify-center font-bold">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#003f5c]">Adjust Program Pacing & Duration for Deeper Learning</h3>
+                        <p class="text-gray-700 mt-1">Extend time for complex topics (SQL, Python, portfolio projects). Offer optional review sessions and more practice assignments to reinforce learning.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 flex items-start space-x-6 shadow-sm">
+                    <div class="text-4xl bg-[#ffa600] text-white rounded-full flex-shrink-0 w-16 h-16 flex items-center justify-center font-bold">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#003f5c]">Enhance Live Session Accessibility & Promote Asynchronous Options</h3>
+                        <p class="text-gray-700 mt-1">Introduce a wider range of live class times (e.g., early morning, late evening, weekend slots) to better accommodate diverse work shifts and time zones. Actively promote and clarify the benefits of asynchronous lecture attendance via recorded sessions.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 flex items-start space-x-6 shadow-sm">
+                    <div class="text-4xl bg-[#4f8a8b] text-white rounded-full flex-shrink-0 w-16 h-16 flex items-center justify-center font-bold">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#003f5c]">Improve Proactive Communication & Personalized Support</h3>
+                        <p class="text-gray-700 mt-1">Increase the frequency and proactivity of check-ins from CSCs and all staff. Ensure timely responses and provide clear, consistent guidance on deadlines and expectations.</p>
+                    </div>
+                </div>
+                 <div class="bg-gray-50 rounded-xl p-6 flex items-start space-x-6 shadow-sm">
+                    <div class="text-4xl bg-[#58508d] text-white rounded-full flex-shrink-0 w-16 h-16 flex items-center justify-center font-bold">4</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#003f5c]">Provide Targeted Training for Instructors & TAs</h3>
+                        <p class="text-gray-700 mt-1">Implement additional training for TAs and instructors on pacing, clarity, and communication techniques, especially for those with language barriers. Standardize teaching methods and ensure clear, step-by-step explanations for complex topics.</p>
+                    </div>
+                </div>
+                 <div class="bg-gray-50 rounded-xl p-6 flex items-start space-x-6 shadow-sm">
+                    <div class="text-4xl bg-[#003f5c] text-white rounded-full flex-shrink-0 w-16 h-16 flex items-center justify-center font-bold">5</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#003f5c]">Refine Professional Development for Targeted Impact</h3>
+                        <p class="text-gray-700 mt-1">Develop more targeted, individualized support for career development and ensure materials are continuously updated. Integrate more interactive elements like mock interviews and workshops.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 flex items-start space-x-6 shadow-sm">
+                    <div class="text-4xl bg-[#003f5c] text-white rounded-full flex-shrink-0 w-16 h-16 flex items-center justify-center font-bold">6</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#003f5c]">Optimize Technology Tools for Seamless Experience</h3>
+                        <p class="text-gray-700 mt-1">Prioritize addressing technical issues with platforms like Codio. Manage Slack channels for better focus. Consider extending access duration to learning resources post-program.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 bg-[#003f5c] text-gray-300 mt-12">
+        <p>Infographic generated based on DANA-014 Exit Survey Analysis. July 19, 2025.</p>
+    </footer>
+
+    <script>
+        function wrapLabel(label) {
+            const maxLength = 16;
+            if (typeof label !== 'string' || label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const chartColors = {
+            blue: '#003f5c',
+            teal: '#4f8a8b',
+            purple: '#58508d',
+            orange: '#ff6361',
+            yellow: '#ffa600',
+            lightGray: '#dddddd',
+            darkGray: '#6b7280',
+            red: '#dc2626'
+        };
+
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                },
+                datalabels: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        font: { size: 11 }
+                    },
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                    ticks: {
+                        font: { size: 11 }
+                    },
+                    beginAtZero: true
+                }
+            }
+        };
+
+        new Chart(document.getElementById('npsChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Promoters (81.1%)', 'Passives (15.1%)', 'Detractors (3.8%)'].map(wrapLabel),
+                datasets: [{
+                    data: [81.1, 15.1, 3.8],
+                    backgroundColor: [chartColors.teal, chartColors.yellow, chartColors.orange],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false, 
+                plugins: { 
+                    legend: { position: 'right', display: true },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } },
+                    datalabels: { display: false }
+                } 
+            }
+        });
+
+        new Chart(document.getElementById('taOverallPerformanceChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Communication (5)', 'Responsiveness (5)', 'Support (5)', 'Feedback (5)', 'Recommendation (10)'].map(wrapLabel),
+                datasets: [{ data: [4.58, 4.62, 4.54, 4.59, 9.45], backgroundColor: [chartColors.blue, chartColors.teal, chartColors.purple, chartColors.orange, chartColors.yellow] }]
+            },
+            options: { ...defaultChartOptions, indexAxis: 'y', scales: { x: { max: 10, ticks: { callback: (value, index) => index < 4 ? `${value}/5` : `${value}/10` } } } }
+        });
+
+        new Chart(document.getElementById('taTopPerformersChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Crystal Brinkley', 'Jeff Reyes', 'Laura Yarce', 'Fisnik Mucha'].map(wrapLabel),
+                datasets: [{ label: 'CSAT Score (%)', data: [100, 92.5, 88.6, 92.9], backgroundColor: [chartColors.teal, chartColors.blue, chartColors.purple, chartColors.orange] }]
+            },
+            options: { ...defaultChartOptions, scales: { y: { max: 100, ticks: { callback: v => v + '%' } } } }
+        });
+        
+        const createInstructorChart = (elementId, scores, csat) => {
+             new Chart(document.getElementById(elementId), {
+                type: 'bar',
+                data: {
+                    labels: ['Lead/Teach (5)', 'Support/Comm. (5)', 'Recommend (10)', 'CSAT (%)'].map(wrapLabel),
+                    datasets: [{ data: scores.concat(csat), backgroundColor: [chartColors.blue, chartColors.teal, chartColors.purple, chartColors.orange] }]
+                },
+                options: { ...defaultChartOptions, scales: { y: { beginAtZero: true, suggestedMax: 100, ticks: { callback: (value, index) => index < 2 ? `${value}/5` : (index === 2 ? `${value}/10` : `${value}%`) } } }, plugins: { legend: {display: false}, tooltip: {callbacks: { title: tooltipTitleCallback }}, datalabels: { display: false }}}
+            });
+        };
+        createInstructorChart('headTaPerformanceChart', [4.4, 4.36, 9.05], 75.9);
+        createInstructorChart('li1PerformanceChart', [4.68, 4.69, 9.63], 92.1);
+        createInstructorChart('li2PerformanceChart', [4.28, 4.33, 9.02], 77.8);
+
+        new Chart(document.getElementById('cscPerformanceChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Ayanna Aisien', 'Kaneesha Tarrant', 'Damarcus Smith', 'Dora Moreira', 'Mikelynn Romero'].map(wrapLabel),
+                datasets: [{ data: [97.22, 94.74, 94.59, 92.31, 91.43], backgroundColor: [chartColors.teal, chartColors.blue, chartColors.purple, chartColors.orange, chartColors.yellow] }]
+            },
+            options: { ...defaultChartOptions, indexAxis: 'y', scales: { x: { suggestedMin: 70, max: 100, ticks: { callback: v => v + '%' } } } }
+        });
+
+        new Chart(document.getElementById('pdBeneficialChart'), {
+            type: 'bar',
+            data: {
+                labels: ['CSC Meetings', 'Resume/LinkedIn', 'Course Resources', 'PD Projects'].map(wrapLabel),
+                datasets: [{ data: [39.5, 31.0, 15.1, 13.7], backgroundColor: [chartColors.teal, chartColors.blue, chartColors.purple, chartColors.orange] }]
+            },
+            options: { ...defaultChartOptions, indexAxis: 'y', scales: { x: { max: 45, ticks: { callback: v => v + '%' } } } }
+        });
+        
+        const createPieChart = (elementId, data, labels) => {
+            new Chart(document.getElementById(elementId), {
+                type: 'pie',
+                data: {
+                    labels: labels.map(wrapLabel),
+                    datasets: [{ data: data, backgroundColor: [chartColors.teal, chartColors.blue, chartColors.lightGray, chartColors.orange, chartColors.red], borderColor: '#ffffff', borderWidth: 2 }]
+                },
+                options: { 
+                    responsive: true, 
+                    maintainAspectRatio: false, 
+                    plugins: { 
+                        legend: { position: 'bottom', display: true },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } },
+                        datalabels: { display: false }
+                    } 
+                }
+            });
+        };
+        createPieChart('lectureDifficultyChart', [36.2, 45.2, 13.2, 3.3, 2.2], ['Strongly Agree (36.2%)', 'Agree (45.2%)', 'Neither (13.2%)', 'Disagree (3.3%)', 'Strongly Disagree (2.2%)']);
+        
+        new Chart(document.getElementById('programLengthOverallChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Just Right (77.5%)', 'Too Short (17.8%)', 'Too Long (4.7%)'].map(wrapLabel),
+                datasets: [{ data: [77.5, 17.8, 4.7], backgroundColor: [chartColors.teal, chartColors.yellow, chartColors.orange], borderColor: '#ffffff', borderWidth: 2 }]
+            },
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false, 
+                plugins: { 
+                    legend: { position: 'bottom', display: true },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } },
+                    datalabels: { display: false }
+                } 
+            }
+        });
+
+        new Chart(document.getElementById('techCsatChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Codio Experience', 'Training Website Experience', 'Overall Technology Experience'].map(wrapLabel),
+                datasets: [{ data: [68.8, 77.3, 79.7], backgroundColor: [chartColors.blue, chartColors.teal, chartColors.purple] }]
+            },
+            options: { ...defaultChartOptions, indexAxis: 'y', scales: { x: { suggestedMin: 50, max: 100, ticks: { callback: v => v + '%' } } } }
+        });
+
+        // New charts for Job Search Status & Career Skills Analysis
+        new Chart(document.getElementById('jobSearchStatusChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Applying for jobs', 'Searching for jobs', 'Not currently seeking a new job', 'Interviewing for jobs', 'Accepted a new job since starting my C1 program', 'Offered a new job'].map(wrapLabel),
+                datasets: [{ data: [159, 114, 45, 18, 11, 7], backgroundColor: [chartColors.teal, chartColors.blue, chartColors.purple, chartColors.orange, chartColors.yellow, chartColors.red] }]
+            },
+            options: { ...defaultChartOptions, indexAxis: 'y', scales: { x: { beginAtZero: true, max: 180 } } }
+        });
+
+        new Chart(document.getElementById('jobSearchFeelingsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['It\'s challenging, but I\'m determined to keep trying', 'I feel positive about my efforts and progress so far', 'N/A - I already have a job or am not actively searching', 'I feel discouraged and often think about giving up'].map(wrapLabel),
+                datasets: [{ data: [185, 91, 45, 36], backgroundColor: [chartColors.teal, chartColors.blue, chartColors.purple, chartColors.orange] }]
+            },
+            options: { ...defaultChartOptions, indexAxis: 'y', scales: { x: { beginAtZero: true, max: 200 } } }
+        });
+
+        new Chart(document.getElementById('jobsAppliedChart'), {
+            type: 'bar',
+            data: {
+                labels: ['None - I plan to start applying soon', '1 - 2', '3 - 5', '6 - 10', '16+', '10 - 15', 'N/A - I am not interested in a new position at this time'].map(wrapLabel),
+                datasets: [{ data: [82, 66, 65, 43, 35, 18, 11], backgroundColor: [chartColors.teal, chartColors.blue, chartColors.purple, chartColors.orange, chartColors.yellow, chartColors.red, chartColors.darkGray] }]
+            },
+            options: { ...defaultChartOptions, indexAxis: 'y', scales: { x: { beginAtZero: true, max: 90 } } }
+        });
+
+    </script>
+</body>
+</html>
